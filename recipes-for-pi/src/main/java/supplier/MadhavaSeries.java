@@ -1,4 +1,4 @@
-package rs.exproit.source;
+package supplier;
 
 import java.util.function.DoubleSupplier;
 
@@ -10,7 +10,7 @@ public final class MadhavaSeries implements DoubleSupplier {
 
     @Override
     public double getAsDouble() {
-        final var term = Math.pow(-1, k) / (2 * k + 1) / Math.pow(3, k);
+        var term = Math.pow(-1, k) / (2 * k + 1) / Math.pow(3, k);
         k++;
         return term;
     }

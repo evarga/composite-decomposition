@@ -1,4 +1,4 @@
-package rs.exproit.source;
+package supplier;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
@@ -9,22 +9,23 @@ import java.util.function.Supplier;
  */
 public final class ExactMadhavaSeries implements Supplier<BigDecimal> {
     private final MathContext mc;
-    private int k;
+    private long k;
 
     /**
      * Constructs a new instance of this generator.
      *
      * @param precision the required precision for floating point arithmetic.
      */
-    public ExactMadhavaSeries(final int precision) {
+    public ExactMadhavaSeries(int precision) {
         mc = new MathContext(precision);
     }
 
     @Override
     public BigDecimal get() {
-        final var term = BigDecimal.valueOf(Math.pow(-1, k))
-                                   .divide(BigDecimal.valueOf(2 * k + 1), mc)
-                                   .divide(BigDecimal.valueOf(3).pow(k, mc), mc);
+        var term = BigDecimal
+                .valueOf(Math.pow(-1, k))
+                .divide(BigDecimal.valueOf(2 * k + 1), mc)
+                .divide(BigDecimal.valueOf(3).pow((int) k, mc), mc);
         k++;
         return term;
     }
