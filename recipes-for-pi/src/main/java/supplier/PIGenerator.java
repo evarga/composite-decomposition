@@ -3,7 +3,7 @@ package supplier;
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.util.function.Supplier;
-import processor.SeriesAdder;
+import pipeline.SeriesAdder;
 
 public final class PIGenerator implements Supplier<BigDecimal> {
     private int precision = 500;
