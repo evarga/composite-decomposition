@@ -22,8 +22,7 @@ public final class ExactMadhavaSeries implements Supplier<BigDecimal> {
 
     @Override
     public BigDecimal get() {
-        var term = BigDecimal
-                .valueOf(Math.pow(-1, k))
+        var term = BigDecimal.valueOf(Math.pow(-1, k))
                 .divide(BigDecimal.valueOf(2 * k + 1), mc)
                 .divide(BigDecimal.valueOf(3).pow((int) k, mc), mc);
         k++;

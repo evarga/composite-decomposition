@@ -23,8 +23,7 @@ public final class PIGenerator implements Supplier<BigDecimal> {
         if (n > precision)
             precision <<= 1;
 
-        return BigDecimal
-                .valueOf(12)
+        return BigDecimal.valueOf(12)
                 .sqrt(new MathContext(precision))
                 .multiply(SeriesAdder.sum(new ExactMadhavaSeries(precision), n));
     }
