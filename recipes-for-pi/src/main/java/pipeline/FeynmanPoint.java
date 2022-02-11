@@ -36,14 +36,18 @@ public final class FeynmanPoint {
      * @return the first value of Pi containing the Feynman point together with the number of trials.
      */
     public static Result findFeynmanPoint() {
+        /*
+           Pipelines are usually free of side effects, but this one uses peek to preserve the current value for the
+           next "iteration." This is an unconventional usage of Java Streams, so you must extensively document your
+           decision. Furthermore, this approach works only for sequential streams. If you need to refer back to
+           previously seen elements, then iterating over indexes of a collection is a better option, if attainable.
+         */
         AtomicReference<BigDecimal> prev = new AtomicReference<>(BigDecimal.ZERO);
-        // Pipelines are usually free of side effects, but this one uses peek to preserve the current value for the
-        // next "iteration."
         var numTrials = Stream.generate(new PIGenerator())
                 .takeWhile(curr -> FeynmanPoint.compareAndGet(prev.get(), curr).isEmpty())
                 .peek(prev::set)
                 .count();
-        // Calling get below is safe, since by the time we reach this line, prev is guaranteed to contain
+        // Calling 'get' below is safe, since by the time we reach this line, prev is guaranteed to contain
         // the desired value of Pi with enough significant digits. The line below signals to IntelliJ that we
         // know what is going on.
         //noinspection OptionalGetWithoutIsPresent

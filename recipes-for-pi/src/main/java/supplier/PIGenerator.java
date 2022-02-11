@@ -6,7 +6,7 @@ import java.util.function.Supplier;
 import pipeline.SeriesAdder;
 
 public final class PIGenerator implements Supplier<BigDecimal> {
-    private int precision = 500;
+    private int precision = 100;
     private int n;
 
     public static double getApproximatePISlow(int n) {
@@ -20,9 +20,8 @@ public final class PIGenerator implements Supplier<BigDecimal> {
     @Override
     public BigDecimal get() {
         n += 100;
-        // A rudimentary heuristic when to increase precision. The idea is that the number of terms will always
-        // be greater than the number of produced significant digits. A more careful approach would be to also
-        // check for a potential arithmetic exception.
+        // A rudimentary heuristic when to increase precision. Naturally, the number of terms will always
+        // be greater than the number of produced significant digits.
         if (n > precision)
             precision <<= 1;
 
