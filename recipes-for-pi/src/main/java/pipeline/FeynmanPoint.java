@@ -36,9 +36,9 @@ public final class FeynmanPoint {
      * @return the first value of Pi containing the Feynman point together with the number of trials.
      */
     public static Result findFeynmanPoint() {
-        // This is a general pattern applicable for parallel streams, too.
-        final var prev = new AtomicReference<BigDecimal>(BigDecimal.ZERO);
-        // Pipelines are usually stateless, but this is a stateful one, since it relies on the previous value.
+        AtomicReference<BigDecimal> prev = new AtomicReference<>(BigDecimal.ZERO);
+        // Pipelines are usually free of side effects, but this one uses peek to preserve the current value for the
+        // next "iteration."
         var numTrials = Stream.generate(new PIGenerator())
                 .takeWhile(curr -> FeynmanPoint.compareAndGet(prev.get(), curr).isEmpty())
                 .peek(prev::set)
