@@ -28,7 +28,7 @@ public final class App {
             case "b" -> System.out.printf("\u03c0 = %.16f\n",
                     PIGenerator.getApproximatePIFast(Integer.parseInt(args[1])));
 
-            default -> System.out.printf("\u03c0 = %sn", FeynmanPoint.findFeynmanPoint());
+            default -> System.out.printf("\u03c0 = %s\n", FeynmanPoint.findFeynmanPoint());
         }
     }
 }
