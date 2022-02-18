@@ -3,7 +3,7 @@ Accompanying source material for the YouTube channel [Composite Decomposition](h
 
 :information_source: Slides for videos can be found [here](https://drive.google.com/drive/folders/1X6XTbhMM_CAfaKP40pqBXpb3gCgv3-Mz?usp=sharing). Each presentation follows the `Video_<ID>.pptx` file naming convention (for example, `Video_1.pptx`). The only exception is the `Trailer.pptx` that contains slides for the channel's introductory video.
 
-> If you have a proposal for a new topic that you would like me to cover, then create an issue here. Of course, don't forget pressing the _Subscribe_ butten to avoid missing novel presentations.
+> If you have a proposal for a new topic that you would like me to cover, then create an issue here. Of course, don't forget pressing the _Subscribe_ button to avoid missing novel presentations.
 
 # Table of Contents
 The following list gives a brief overview what is currently contained or planned to be in this project:
