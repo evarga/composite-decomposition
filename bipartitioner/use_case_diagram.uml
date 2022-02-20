@@ -1,0 +1,12 @@
+@startuml
+left to right direction
+
+actor "Organizer" as org
+rectangle Bipartitioner {
+  usecase "Massage Input" as UC1
+  usecase "Partition People" as UC2
+}
+
+UC2 .right-> UC1 : include
+org -down-> UC2
+@enduml

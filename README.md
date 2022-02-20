@@ -12,3 +12,5 @@ The following list gives a brief overview what is currently contained or planned
    Video about dangers of forgetting to investigate background mechanisms just because things seems simple at the surface; the story is exemplified via caching dangers.
 2.  **Recipes for &pi;** (`recipes-for-pi` folder):  
    Solution in Java 9+ for *Exploration 4.2* as described in [Chapter 4 of the Introduction to Computing](http://computingbook.org/Problems.pdf) book.
+3.  **Bipartitioner** (`bipartitioner` folder)
+   Video about importance of proper requirements engineering exemplified via 2 LeetCode problems associated with bipartitioning a graph.
