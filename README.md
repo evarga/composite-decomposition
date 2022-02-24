@@ -15,4 +15,4 @@ The following list gives a brief overview what is currently contained or planned
 3.  **Bipartitioner** (`bipartitioner` folder):  
    Video about importance of proper requirements engineering exemplified via 2 LeetCode problems associated with bipartitioning a graph.
 4.  **Pins** (`pins` folder):  
-   Video about the power of hybrid algorithms and how to design a solution around them.
+   Video about the power of hybrid algorithms and how to design solution leveraging them.
