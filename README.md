@@ -14,3 +14,5 @@ The following list gives a brief overview what is currently contained or planned
    Solution in Java 9+ for *Exploration 4.2* as described in [Chapter 4 of the Introduction to Computing](http://computingbook.org/Problems.pdf) book.
 3.  **Bipartitioner** (`bipartitioner` folder):  
    Video about importance of proper requirements engineering exemplified via 2 LeetCode problems associated with bipartitioning a graph.
+4.  **Pins** (`pins` folder):  
+   Video about the power of hybrid algorithms and how to design a solution around them.
