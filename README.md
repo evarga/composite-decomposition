@@ -16,3 +16,5 @@ The following list gives a brief overview what is currently contained or planned
    Video about importance of proper requirements engineering exemplified via 2 LeetCode problems associated with bipartitioning a graph.
 4.  **Pins** (`pins` folder):  
    Video about the power of hybrid algorithms and how to design solutions leveraging them.
+5.  **Barns** (`barns` folder):  
+   Introduction to the profound Primal-Dual problem solving paradigm.
